@@ -8,12 +8,14 @@
     "@testing-library/user-event": "^7.1.2",
     "boostrap": "^2.0.0",
     "bootstrap": "^4.5.3",
+    "prettier": "^2.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
     "reactstrap": "^8.7.1"
   },
   "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
