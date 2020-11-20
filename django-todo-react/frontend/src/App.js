@@ -1,11 +1,27 @@
 import React from "react";
-import { Button } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import { Button, TextField } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  root: {
+    textAlign: "center",
+  },
+  button: {
+    color: "white",
+    background: "black",
+  }
+});
 
 const App = () => {
+  const classes = useStyles();
+
   return (
-    <div>
-      <Button variant="contained" color="primary">
-        Hello World
+    <div className={classes.root}>
+    <form>
+    <TextField id="outlined-basic" label="Task" variant="outlined"/>
+    </form>
+      <Button className={classes.button} variant="contained">
+        Add task
       </Button>
     </div>
   );
