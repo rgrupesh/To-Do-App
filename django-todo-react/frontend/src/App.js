@@ -1,8 +1,8 @@
 import React from "react";
-import Home from "./components/home";
+import TodoForm from "./components/TodoForm";
 
 function App() {
-  return <Home />;
+  return <TodoForm />;
 }
 
 export default App;
