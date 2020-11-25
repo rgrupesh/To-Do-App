@@ -7,8 +7,8 @@ const TodoForm = () => {
       <Container maxWidth="sm">
         <form>
           <FormControl fullWidth={true}>
-            <TextField label="Enter Todo" />
-            <Button variant="contained" color="primary">
+            <TextField label="Enter Todo" required={true}/>
+            <Button variant="contained" color="primary" type="submit" style={{marginTop:5}}>
               Add Todo
             </Button>
           </FormControl>
