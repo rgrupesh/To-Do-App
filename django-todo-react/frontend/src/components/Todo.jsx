@@ -8,6 +8,7 @@ import {
 } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
 import CheckIcon from "@material-ui/icons/Check";
+import EditIcon from "@material-ui/icons/Edit";
 
 const Todo = () => {
   return (
@@ -23,6 +24,9 @@ const Todo = () => {
                 <CheckIcon />
               </IconButton>
               Coursera GAN
+              <IconButton style={{ float: "right" }}>
+                <EditIcon />
+              </IconButton>
               <IconButton style={{ float: "right" }}>
                 <DeleteIcon />
               </IconButton>
