@@ -1,9 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import { Container, TextField, Button, FormControl } from "@material-ui/core";
 import Switch from "@material-ui/core/Switch";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 
-const TodoForm = () => {
+const TodoForm = ({addTodo}) => {
+  const [text, setText] = useState("");
+
+  const handleSubmit = e =>{
+    e.preventDefault();
+    addTodo(text);
+    setText("");
+  }
   return (
     <div>
       <FormControlLabel
@@ -11,9 +18,9 @@ const TodoForm = () => {
         label="Change theme"
       />
       <Container maxWidth="sm">
-        <form>
+        <form onSubmit={handleSubmit}>
           <FormControl fullWidth={true}>
-            <TextField label="Enter Todo" required={true} />
+            <TextField label="Enter Todo" required={true} value={text} onChange={e => setText(e.target.value)}/>
             <Button
               variant="contained"
               color="primary"

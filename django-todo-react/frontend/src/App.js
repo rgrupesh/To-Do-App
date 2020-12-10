@@ -16,9 +16,18 @@ function App() {
       isCompleted: false,
     }
   ])
+
+  const addTodo = (text) => {
+    const newTodo = {
+      id: 3,
+      title: text,
+      isCompleted: false
+    }
+    setTodos([...todos, newTodo])
+  }
   return (
     <div>
-      <TodoForm />
+      <TodoForm addTodo={addTodo}/>
       <TodoList todos={todos} />
     </div>
   );
