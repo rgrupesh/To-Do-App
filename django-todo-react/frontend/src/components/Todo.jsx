@@ -10,7 +10,10 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import CheckIcon from "@material-ui/icons/Check";
 import EditIcon from "@material-ui/icons/Edit";
 
-const Todo = ({ title }) => {
+const Todo = ({ title, checkTodo,id }) => {
+  
+  const markComplete = () => checkTodo(id)
+
   return (
     <div>
       <Container>
@@ -20,15 +23,15 @@ const Todo = ({ title }) => {
         >
           <CardContent>
             <Typography variant="h5">
-              <IconButton>
-                <CheckIcon />
+              <IconButton onClick={markComplete}>
+                <CheckIcon style={{ color: "green"}}/>
               </IconButton>
               {title}
               <IconButton style={{ float: "right" }}>
-                <EditIcon />
+                <EditIcon style={{ color: "blue"}}/>
               </IconButton>
               <IconButton style={{ float: "right" }}>
-                <DeleteIcon />
+                <DeleteIcon style={{ color: "red"}}/>
               </IconButton>
             </Typography>
           </CardContent>

@@ -17,6 +17,10 @@ function App() {
     }
   ])
 
+  const checkTodo = (id) => {
+    console.log(id)
+  }
+
   const addTodo = (text) => {
     const newTodo = {
       id: 3,
@@ -28,7 +32,7 @@ function App() {
   return (
     <div>
       <TodoForm addTodo={addTodo}/>
-      <TodoList todos={todos} />
+      <TodoList todos={todos} checkTodo={checkTodo}/>
     </div>
   );
 }
